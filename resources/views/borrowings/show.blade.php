@@ -21,11 +21,11 @@
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h6 class="fw-semibold mb-0">Peminjaman #{{ $borrowing->id }}</h6>
                     @if($borrowing->status === 'borrowed')
-                        <span class="badge rounded-pill" style="background:#E6F1FB; color:#0C447C;">Dipinjam</span>
+                        <span class="badge rounded-pill" style="background: #1d61a0; color: #7c0c67;">Dipinjam</span>
                     @elseif($borrowing->status === 'returned')
-                        <span class="badge rounded-pill" style="background:#EAF3DE; color:#27500A;">Dikembalikan</span>
+                        <span class="badge rounded-pill" style="background: #8ad625; color: #e6ece3;">Dikembalikan</span>
                     @else
-                        <span class="badge rounded-pill" style="background:#FCEBEB; color:#791F1F;">Terlambat</span>
+                        <span class="badge rounded-pill" style="background: #8a0c0c; color: #eb0c0c;">Terlambat</span>
                     @endif
                 </div>
 
