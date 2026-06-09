@@ -169,11 +169,11 @@
                     <td>{{ $borrowing->return_deadline->format('d M Y') }}</td>
                     <td>
                         @if($borrowing->status === 'borrowed')
-                            <span class="badge rounded-pill" style="background:#E6F1FB; color:#0C447C;">Dipinjam</span>
+                            <span class="badge rounded-pill" style="background:#E6F1FB; color: #8babcb;">Dipinjam</span>
                         @elseif($borrowing->status === 'returned')
-                            <span class="badge rounded-pill" style="background:#EAF3DE; color:#27500A;">Dikembalikan</span>
+                            <span class="badge rounded-pill" style="background:#EAF3DE; color: #132705;">Dikembalikan</span>
                         @else
-                            <span class="badge rounded-pill" style="background:#FCEBEB; color:#791F1F;">Terlambat</span>
+                            <span class="badge rounded-pill" style="background:#FCEBEB; color: #791F1F;">Terlambat</span>
                         @endif
                     </td>
                 </tr>
