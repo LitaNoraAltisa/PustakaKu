@@ -36,10 +36,12 @@
                         <select name="book_id" class="form-select @error('book_id') is-invalid @enderror">
                             <option value="">Pilih buku</option>
                             @foreach($books as $book)
+                                @if($book->stock > 0)
                                 <option value="{{ $book->id }}" {{ old('book_id') == $book->id ? 'selected' : '' }}
                                     {{ $book->stock == 0 ? 'disabled' : '' }}>
                                     {{ $book->title }} (Stok: {{ $book->stock }})
                                 </option>
+                                @endif
                             @endforeach
                         </select>
                         @error('book_id')
